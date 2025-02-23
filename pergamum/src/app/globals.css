@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 0 0% 3.9%;
+		--card: 0 0% 100%;
+		--card-foreground: 0 0% 3.9%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 0 0% 3.9%;
+		--primary: 0 0% 9%;
+		--primary-foreground: 0 0% 98%;
+		--secondary: 0 0% 96.1%;
+		--secondary-foreground: 0 0% 9%;
+		--muted: 0 0% 96.1%;
+		--muted-foreground: 0 0% 45.1%;
+		--accent: 0 0% 96.1%;
+		--accent-foreground: 0 0% 9%;
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 0 0% 98%;
+		--border: 0 0% 89.8%;
+		--input: 0 0% 89.8%;
+		--ring: 0 0% 3.9%;
+		--chart-1: 12 76% 61%;
+		--chart-2: 173 58% 39%;
+		--chart-3: 197 37% 24%;
+		--chart-4: 43 74% 66%;
+		--chart-5: 27 87% 67%;
+		--radius: 0.5rem;
+
+		--palette-primary: 266 100% 50%;
+		--palette-secondary: 279 100% 47%;
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--background: 0 0% 3.9%;
+			--foreground: 0 0% 98%;
+			--card: 0 0% 3.9%;
+			--card-foreground: 0 0% 98%;
+			--popover: 0 0% 3.9%;
+			--popover-foreground: 0 0% 98%;
+			--primary: 0 0% 98%;
+			--primary-foreground: 0 0% 9%;
+			--secondary: 0 0% 14.9%;
+			--secondary-foreground: 0 0% 98%;
+			--muted: 0 0% 14.9%;
+			--muted-foreground: 0 0% 63.9%;
+			--accent: 0 0% 14.9%;
+			--accent-foreground: 0 0% 98%;
+			--destructive: 0 62.8% 30.6%;
+			--destructive-foreground: 0 0% 98%;
+			--border: 0 0% 14.9%;
+			--input: 0 0% 14.9%;
+			--ring: 0 0% 83.1%;
+			--chart-1: 220 70% 50%;
+			--chart-2: 160 60% 45%;
+			--chart-3: 30 80% 55%;
+			--chart-4: 280 65% 60%;
+			--chart-5: 340 75% 55%;
+			--radius: 0.5rem;
+
+			--palette-primary-50: 266 100% 85%;
+			--palette-primary-100: 266 100% 80%;
+			--palette-primary-200: 266 100% 75%;
+			--palette-primary-300: 266 100% 70%;
+			--palette-primary-400: 266 100% 65%;
+			--palette-primary-500: 266 100% 60%;
+			--palette-primary-600: 266 100% 55%;
+			--palette-primary-700: 266 100% 50%;
+			--palette-primary-800: 266 100% 40%;
+			--palette-primary-900: 266 100% 30%;
+			--palette-primary-950: 266 100% 20%;
+
+			--palette-secondary-50: 279 100% 82%;
+			--palette-secondary-100: 279 100% 77%;
+			--palette-secondary-200: 279 100% 72%;
+			--palette-secondary-300: 279 100% 67%;
+			--palette-secondary-400: 279 100% 62%;
+			--palette-secondary-500: 279 100% 57%;
+			--palette-secondary-600: 279 100% 52%;
+			--palette-secondary-700: 279 100% 47%;
+			--palette-secondary-800: 279 100% 37%;
+			--palette-secondary-900: 279 100% 27%;
+			--palette-secondary-950: 279 100% 17%;
+		}
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border outline-ring/50;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
+}
+
+/* begin your theming here --- */
+.root-container {
+	@apply flex min-h-screen flex-1 flex-col bg-cover bg-top px-4 md:px-6 lg:px-8;
+}
