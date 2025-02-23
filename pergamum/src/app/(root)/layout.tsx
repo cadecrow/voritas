@@ -1,4 +1,4 @@
-import RootHeader from "@/components/composite/RootHeader";
+import RootHeader from "@/components/RootHeader";
 import React from "react";
 
 const Layout = ({ ...props }: { children: React.ReactNode }) => {
