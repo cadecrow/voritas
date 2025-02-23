@@ -1,0 +1,11 @@
+# my stuff
+NOTES.md
+
+assets/
+
+# everything .env related
+.env*
+.env.local
+**/.env
+**/.env.local
+**/.env*
