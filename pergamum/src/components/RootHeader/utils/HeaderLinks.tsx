@@ -16,6 +16,7 @@ const HeaderLinks = ({ ...props }: { className?: string }) => {
 		<ol className={`${props.className}`}>
 			{links.map((link, index) => (
 				<li key={link.id}>
+					{index !== 0 && <span className="px-1">|</span>}
 					<Link
 						href={link.path}
 						className={cn(
@@ -25,7 +26,6 @@ const HeaderLinks = ({ ...props }: { className?: string }) => {
 					>
 						{link.title}
 					</Link>
-					{index + 1 !== links.length && <span> | </span>}
 				</li>
 			))}
 		</ol>
