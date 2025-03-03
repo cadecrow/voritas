@@ -4,7 +4,7 @@ import HeaderLinks from "./utils/HeaderLinks";
 const RootHeader = ({ ...props }: { className?: string }) => {
 	return (
 		<div className={`flex flex-col items-center w-full ${props.className}`}>
-			<span>Header</span>
+			<span>_cc</span>
 			<HeaderLinks className="flex w-full justify-center" />
 		</div>
 	);

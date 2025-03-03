@@ -6,12 +6,11 @@ import { cn } from "@/lib/utils";
 
 const links: { id: number; title: string; path: string }[] = [
 	{ id: 1, title: "Home", path: "/" },
-	{ id: 2, title: "Dummy", path: "/dummy" },
+	{ id: 2, title: "Library", path: "/library" },
 ];
 
 const HeaderLinks = ({ ...props }: { className?: string }) => {
 	const pathname = usePathname();
-
 	return (
 		<ol className={`${props.className}`}>
 			{links.map((link, index) => (
@@ -21,7 +20,9 @@ const HeaderLinks = ({ ...props }: { className?: string }) => {
 						href={link.path}
 						className={cn(
 							"text-base cursor-pointer capitalize hover:text-blue-500",
-							pathname === link.path ? "text-palette-primary-300" : "text-foreground"
+							pathname === link.path
+								? "text-palette-primary-300"
+								: "text-foreground"
 						)}
 					>
 						{link.title}
