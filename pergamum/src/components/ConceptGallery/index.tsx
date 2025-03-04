@@ -1,20 +1,21 @@
 import React from "react";
 import { Suspense } from "react";
-import { OverviewBook } from "@/types/Book.types";
-import BookOverview from "../BookOverview";
-import { Button } from "../ui/button";
-import Image from "next/image";
+import { ConceptOverview, IConcept } from "@/types/Concept.types";
+import { dummyConcepts } from "../../../public/data/dummydata";
+import ConceptGalleryGrid from "./client/ConceptGalleryGrid";
 
-async function getData(): Promise<OverviewBook[]> {
-	const res = await fetch("http://localhost:3000/api/dummy");
-	if (!res.ok) {
-		throw new Error("Failed to fetch data");
-	}
-	const data = await res.json();
+async function getData(): Promise<IConcept[]> {
+	// const res = await fetch("http://localhost:3000/api/dummy");
+	// if (!res.ok) {
+	// 	throw new Error("Failed to fetch data");
+	// }
+	// const data = await res.json();
+  const data = dummyConcepts;
 	return data;
 }
 
 async function ClientContentWrapper() {
+	// todo add data validation
 	try {
 		const data = await getData();
 		if (!data || data.length === 0) {
@@ -36,19 +37,13 @@ async function ClientContentWrapper() {
 }
 
 // ADD YOUR CLIENT COMPONENT HERE
-const ClientContent = ({ ...props }: { data: OverviewBook[] }) => {
+const ClientContent = ({ ...props }: { data: IConcept[] }) => {
 	return (
-		<>
-			{props.data.map((book, index) => (
-				<Button key={index} className="m-4">
-					<Image src={"/file.svg"} alt={book.title} width={20} height={30} />
-				</Button>
-			))}
-		</>
+		<ConceptGalleryGrid concepts={props.data} />
 	);
 };
 
-const LibraryGallery = ({ ...props }: { className?: string }) => {
+const ConceptGallery = ({ ...props }: { className?: string }) => {
 	return (
 		<div className={`overflow-y-auto ${props.className}`}>
 			<Suspense
@@ -64,4 +59,4 @@ const LibraryGallery = ({ ...props }: { className?: string }) => {
 	);
 };
 
-export default LibraryGallery;
+export default ConceptGallery;

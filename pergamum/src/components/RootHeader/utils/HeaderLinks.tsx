@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 const links: { id: number; title: string; path: string }[] = [
 	{ id: 1, title: "Home", path: "/" },
-	{ id: 2, title: "Library", path: "/library" },
+	{ id: 2, title: "Concepts", path: "/conceptlibrary" },
 ];
 
 const HeaderLinks = ({ ...props }: { className?: string }) => {

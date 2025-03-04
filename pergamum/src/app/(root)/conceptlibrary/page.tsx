@@ -1,10 +1,10 @@
-import LibraryGallery from '@/components/LibraryGallery'
+import ConceptGallery from '@/components/ConceptGallery'
 import React from 'react'
 
 const LibraryPage = () => {
   return (
     <div>
-      <LibraryGallery className="w-full h-full" />
+      <ConceptGallery className="w-full h-full" />
     </div>
   )
 }
