@@ -1,5 +1,6 @@
 import React from "react";
 import { IConcept, TodoID } from "@/types/Concept.types";
+import Image from 'next/image'
 
 export const ConceptOverview = ({
 	...props
@@ -13,10 +14,12 @@ export const ConceptOverview = ({
 			className={`cursor-pointer hover:opacity-80 transition-opacity ${props.containerClassName}`}
 			onClick={() => props.handleClick(props.concept.id)}
 		>
-			<img
-				src={"http://localhost:3000/file.svg"}
-				alt={props.concept.title}
-				className="w-full h-48 object-cover"
+			<Image
+				// todo - extract values from generic ConceptHeader type
+				src={}
+				alt={`Title of card: ${props.concept.title}`}
+				width={}
+				height={}
 			/>
 			<h3 className="mt-2 text-center">{props.concept.title}</h3>
 		</div>
