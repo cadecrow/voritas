@@ -20,13 +20,13 @@ const ConceptGalleryGrid = ({
 	return (
 		<div className={`grid grid-cols-5 gap-4 ${props.containerClassName}`}>
 			{props.concepts.map((concept) => (
-				<div key={concept.id} className="relative">
+				<div key={concept.id} className="relative border border-white">
 					<ConceptOverview concept={concept} handleClick={handleItemClick} />
 
-					{/* Expandable Details Section */}
+					{/* Expandable Details Section
 					{expandedItemId === concept.id && (
 						<ConceptExpandable explanation={concept.explanation} />
-					)}
+					)} */}
 				</div>
 			))}
 		</div>

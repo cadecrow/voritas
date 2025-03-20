@@ -14,7 +14,7 @@ export const ConceptOverview = ({
 			onClick={() => props.handleClick(props.concept.id)}
 		>
 			<img
-				src={"https://localhost:3000/file.svg"}
+				src={"http://localhost:3000/file.svg"}
 				alt={props.concept.title}
 				className="w-full h-48 object-cover"
 			/>
